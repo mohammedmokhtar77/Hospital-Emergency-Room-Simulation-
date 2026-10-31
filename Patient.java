@@ -16,10 +16,7 @@ public class Patient implements Runnable {
             enterWaitingRoom();
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            return;
         }
-
-        leaveHospital();
     }
 
     public void arrive() {
@@ -36,5 +33,11 @@ public class Patient implements Runnable {
 
     public void leaveHospital() {
         System.out.println("Patient " + patientId + " left the hospital.");
+    }
+
+
+    
+    public int getPatientId() {
+        return patientId;
     }
 }
